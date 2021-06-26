@@ -1,0 +1,26 @@
+.prof-header{
+    /* border:solid red; */
+    /* padding: 333px; */
+    margin-top: 19%;
+    /* margin-left: 40%; */
+}
+.prof-card{
+    max-width:90%;
+}
+
+.prof-pic{
+    max-width: 80%;
+    max-height:80%;
+    margin-left: 4%;
+}
+
+.prof-name{
+    display: flex;
+    justify-content: center; 
+    
+}
+
+.flw-btn{
+    /* margin-left: 1%; */
+}
+

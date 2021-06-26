@@ -1,0 +1,17 @@
+.post{
+    margin-bottom: 9%;
+}
+.prof_img_post{
+    max-width: 10%;
+    max-height:10%;
+    /* border:solid red; */
+}
+.likes_comments{
+        display: flex;
+        align-items: center;
+        justify-content:'space-between';
+        flex-wrap: wrap;
+}
+.number {
+    margin-left: 10%;
+}
