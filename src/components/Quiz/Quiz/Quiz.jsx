@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Card, Container,Radio } from '@material-ui/core';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import './styles.css'
 import { Button } from 'react-bootstrap';
 import routes from './../../../Routes';
@@ -15,10 +15,14 @@ const Quiz = ({quiz}) => {
                         <h4>Time left: <span style={{color:'red'}} >2:47</span> </h4>
                     </Grid>
                     <Grid item>
-                        <Link to={routes.quizGrade}>
-                            <Button variant="primary" className='submit-btn' size='lg'>Submit</Button>{' '}
+                        
+                            <Button variant="primary" className='submit-btn' size='lg'>
+                                <Link to={routes.quizGrade} className='link-to-grade' >
+                                    Submit
+                                </Link>
+                            </Button>{' '}
 
-                        </Link>
+                      
                     </Grid>
                 </Grid>
                 
@@ -26,7 +30,7 @@ const Quiz = ({quiz}) => {
                     {questions.map((question)=>(
                         <Grid item key={question.id}>
                             <Card className='card'>
-                                <h3>{question.title}</h3>
+                                <h3>{question.id}. {question.title}</h3>
                                 <FormControlLabel value={question.option1}  control={<Radio />} label={question.option1} />
                                 <FormControlLabel value={question.option2}  control={<Radio />} label={question.option2} />
                                 <FormControlLabel value={question.option3} control={<Radio />} label={question.option3} />

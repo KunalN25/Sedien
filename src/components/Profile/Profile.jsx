@@ -72,9 +72,7 @@ const Profile = () => {
                                                     Kunal Nalawade
                                                 </Typography>
                                             </Grid>
-                                            <Grid item>
-                                                <Button className='flw-btn' variant="contained" color='primary'>Follow</Button>
-                                            </Grid>
+                                           
                                         </Grid>
                                     </Grid>
                                     
@@ -89,7 +87,7 @@ const Profile = () => {
 
                     </Grid>
                     <Grid item>
-                        <Typography variant='h4' style={{margin:'5% 0 14% 0'}} >
+                        <Typography variant='h4' style={{margin:'18% 0 56% 0'}} >
                                 Posts
                         </Typography>
                     </Grid>

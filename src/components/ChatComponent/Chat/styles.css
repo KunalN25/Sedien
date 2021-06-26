@@ -36,11 +36,11 @@
 
 .chatbox{
     /* height:100%; */
-    padding:25%;
+    padding:24%;
     /* height: 100%;
     width:100%; */
     /* box-sizing: border-box; */
-    background-color: rgb(205, 212, 210);
+    background-color: rgb(95, 243, 127);
     /* border:solid red; */
 }
 @media screen and (max-width:500px) {

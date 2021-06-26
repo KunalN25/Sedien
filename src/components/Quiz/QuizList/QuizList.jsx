@@ -3,6 +3,7 @@ import { Container,Grid ,Button,Typography,Card} from '@material-ui/core'
 import {Link} from 'react-router-dom'
 // import { Button as ButtonBsp } from 'react-bootstrap'
 import './styles.css'
+import routes from './../../../Routes';
 const QuizList = ({quizzes, setQuiz}) => {
     
     return (
@@ -15,7 +16,12 @@ const QuizList = ({quizzes, setQuiz}) => {
                             </Typography>
                             
                             <Button size='small' variant='contained' color='default'>
-                                Create a Quiz
+                                <Link to={routes.addQuiz} style={{textDecoration:'none',
+                                                                        color:'black'
+                                                                }} >
+                                    Create a Quiz
+                                </Link>
+                                
                             </Button>
                         </div>
 
@@ -23,7 +29,7 @@ const QuizList = ({quizzes, setQuiz}) => {
                     <Grid item direction='column' style={{marginTop:'4%'}} > 
                         {quizzes.map((quiz)=>(
                             <Grid item key={quiz.id}>
-                                <Card className='card'>
+                                <Card className={`card ${quiz.active ?  'active' : ''}`}>
                                     {/* For flex display */}
                                     <div className='quiz-header'>
                                         {/* Name of the quiz */}
@@ -43,11 +49,14 @@ const QuizList = ({quizzes, setQuiz}) => {
                                             className='enter-btn'
                                         >Enter</Button> */}
                                         {/* <ButtonBsp variant="primary">Primary</ButtonBsp>{' '} */}
-                                        <Link to={`/quiz/${quiz.id}`} className='link'>
-                                            <button className=' primary-btn' 
-                                                    onClick={()=>setQuiz(quiz)}
-                                            >Enter</button>
-                                        </Link>
+                                        {quiz.active && 
+                                            <Link to={`/quiz/${quiz.id}`} className='link'>
+                                                <button className=' primary-btn' 
+                                                        onClick={()=>setQuiz(quiz)}
+                                                >Enter</button>
+                                            </Link>
+                                        }
+                                        
                                         
                                     </div>
                                 </Card>

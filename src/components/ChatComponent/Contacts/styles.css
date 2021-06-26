@@ -6,10 +6,10 @@
     margin-top: 6%;
     /* border: solid red; */
 }
-.contact-item{
+/* .contact-item{
 
-}
-.active {
+} */
+.isactive {
     background-color: rgb(199, 195, 195);
     
 }

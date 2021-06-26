@@ -1,0 +1,40 @@
+.header-container{
+    margin-top: 6%;
+    margin-bottom: 3%;
+    /* border:solid red; */
+}
+
+.title-card{
+    padding:4%;
+}
+.create-btn{
+    /* padding-bottom: 72%; */
+}
+.input-ele{
+    margin-bottom: 13%;
+}
+.options{
+    max-width:50%;
+}
+.form-footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width:900px) {
+    .header-container{
+        margin-top: 11%;
+        /* border:solid red; */
+    } 
+    
+}
+@media screen and (max-width:500px) {
+    .header-container{
+        margin-top: 15%;
+        /* border:solid red; */
+    } 
+    .title-card{
+        margin-bottom: 6%;
+    }
+    
+}

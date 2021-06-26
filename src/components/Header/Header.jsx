@@ -46,6 +46,7 @@ const Header = () => {
                             </Typography>
                         </Grid>
                         {isMobile ?
+                        // For mobile
                             <>
                                 <MenuIcon onClick={handleClick}>
                                     Mobile
@@ -64,7 +65,7 @@ const Header = () => {
                                                 </NavLink>
                                             </MenuItem>
                                             <MenuItem onClick={handleClose}>
-                                                <NavLink  to={routes.chat} className={classes.nav}>
+                                                <NavLink  to='/chat' className={classes.nav}>
                                                     <Typography variant='h5'>
                                                         Chat
                                                     </Typography>
@@ -87,7 +88,7 @@ const Header = () => {
                                 </Menu>
                             </>
                             
-                        
+                            // For bigger devices
                         :<Grid  item>
                             <Grid container spacing="4" >
                                 <Grid item>
@@ -100,7 +101,7 @@ const Header = () => {
                                     
                                 </Grid>
                                 <Grid item>
-                                    <NavLink  to='/chat' className={classes.nav}>
+                                    <NavLink  to='/chat/1' className={classes.nav}>
                                         <Typography variant='h5'>
                                             Chat
                                         </Typography>

@@ -194,6 +194,10 @@ const HomePage = () => {
    
     const music=[]
     const [posts,setPosts]=useState(feed)
+
+    function handleClick(list){
+        setPosts(list)
+    }
     return (
         <>
             <Container className='container' maxWidth='sm'>
@@ -201,24 +205,24 @@ const HomePage = () => {
                     <Grid container item spacing='2'>
                         <Grid item>
                             <Button variant='contained' color='primary'
-                                onClick={()=>{setPosts(feed)}}>Feed</Button>
+                                onClick={()=>{handleClick(feed)}}>Feed</Button>
                         </Grid>
                         <Grid item>
                             <Button variant='contained' color='primary'
-                            onClick={()=>{setPosts(covid19)}}>COVID-19</Button>
+                            onClick={()=>{handleClick(covid19)}}>COVID-19</Button>
                         </Grid>
                         <Grid item>
                             <Button variant='contained' color='primary'
-                            onClick={()=>{setPosts(trending)}}>
+                            onClick={()=>{handleClick(trending)}}>
                                 Trending</Button>
                         </Grid>
                         <Grid item>
                             <Button variant='contained' color='primary'
-                            onClick={()=>{setPosts(sports)}}>Sports</Button>
+                            onClick={()=>{handleClick(sports)}}>Sports</Button>
                         </Grid>
                         <Grid item>
                             <Button variant='contained' color='primary'
-                            onClick={()=>{setPosts(technology)}}>Technology</Button>
+                            onClick={()=>{handleClick(technology)}}>Technology</Button>
                         </Grid>
                         
                     </Grid>

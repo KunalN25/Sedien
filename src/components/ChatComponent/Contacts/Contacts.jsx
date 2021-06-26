@@ -16,9 +16,9 @@ const Contacts = ({current, setCurrent,contacts}) => {
                         <Grid item key={contact.id} onClick={()=>{setCurrent(contact)}} >
                             {/* if the contact id is equal to current contact */}
                             <Link to={`/chat/${contact.id}`} className='link'>
-                                <div className={`contact ${contact.id===current.id ? 'active' : '' }`}>
+                                <div className={`contact ${contact.id===current.id ? 'isactive' : '' }`}>
                                     <img src={contact.profile_pic}/>
-                                    <h3>{contact.name} </h3>
+                                    <h5 style={{marginTop:'5%'}}>{contact.name} </h5>
                                 </div>
                             </Link>
                             

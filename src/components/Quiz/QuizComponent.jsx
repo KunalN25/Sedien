@@ -23,6 +23,7 @@ const QuizComponent = () => {
             time:'2min',
             questions:[
                 {
+                    id:1,
                     title:'How much money did Walter White walk away with?',
                     option1:'$4 million',
                     option2:'$40 million',
@@ -31,6 +32,16 @@ const QuizComponent = () => {
 
                 },
                 {
+                    id:2,
+                    title:'What is Walter White\'s other name?',
+                    option1:'Maxwell',
+                    option2:'Heisenberg',
+                    option3:'Planck',
+                    option4:'Einstein',
+
+                },
+                {
+                    id:3,
                     title:'What is Walter White\'s other name?',
                     option1:'Maxwell',
                     option2:'Heisenberg',
@@ -73,6 +84,7 @@ const QuizComponent = () => {
             questions:[]
 
         },
+        
         
         
     ]
