@@ -15,24 +15,25 @@ const Chat = ({contact}) => {
     return (
         <div className='chat-container'>
             {/* <h2>Chat</h2> */}
+            {/* <Grid container direction='column'> */}
                 <Grid item>
-                    {/* chat header */}
-                      <div className='chat-header'> 
-                        <img src={contact.profile_pic}/>
-                        <Grid container direction='column'   >
-                            <Grid item  >
-                                <Typography variant="body1">
-                                    {contact.name}
-                                </Typography>
+                        {/* chat header */}
+                        <div className='chat-header'> 
+                            <img src={contact.profile_pic}/>
+                            <Grid container direction='column'   >
+                                <Grid item  >
+                                    <Typography variant="body1">
+                                        {contact.name}
+                                    </Typography>
+                                </Grid>
+                                <Grid item>
+                                    <Typography variant="body2">
+                                        {contact.status && <span>online</span>}
+                                    </Typography>
+                                </Grid>
+                        
                             </Grid>
-                            <Grid item>
-                                <Typography variant="body2">
-                                    {contact.status && <span>online</span>}
-                                </Typography>
-                            </Grid>
-                    
-                        </Grid>
-                     </div> 
+                        </div> 
                 </Grid>
                 <Grid item>
                     {/* chatbox */}
@@ -47,7 +48,7 @@ const Chat = ({contact}) => {
                         <EmojiEmotionsIcon className='chat-icon' />
                         <AttachmentIcon className='chat-icon'/>
                         {/* <div className='type-message'> */}
-                             <input className='type-message' placeholder='Type here' />
+                            <input className='type-message' placeholder='Type here' />
 
                         {/* </div> */}
                         <MicIcon/>
@@ -55,6 +56,8 @@ const Chat = ({contact}) => {
                     </div>
 
                 </Grid>
+            {/* </Grid> */}
+                
         
         </div>
     )

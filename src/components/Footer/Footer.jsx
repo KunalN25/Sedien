@@ -38,7 +38,7 @@ const Footer = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to='/quiz' className={classes.link}>
+                            <Link to='/quizzes' className={classes.link}>
                                 Quiz
                             </Link>
                         </li>

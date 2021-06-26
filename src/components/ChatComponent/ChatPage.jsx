@@ -3,7 +3,7 @@ import { Container,Grid,Card,CardContent,Typography,Button } from '@material-ui/
 import Contacts from './Contacts/Contacts';
 import Chat from './Chat/Chat';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-
+import routes from '../../Routes'
 import './styles.css'
 const ChatPage = () => {
     const contacts=[
@@ -35,7 +35,7 @@ const ChatPage = () => {
     const [current,setCurrent]=useState(contacts[0])
 
     const [windSize,setWindSize]=useState(window.innerWidth);
-    const isMobile=windSize<=960;
+    const isMobile=windSize<=972;
     const handleSizeChange=()=>{
         setWindSize(window.innerWidth);
     }
@@ -45,24 +45,10 @@ const ChatPage = () => {
     },[])
 
     return (
-        <div class='container1'>
-            {isMobile ? 
-                    <Grid container justify='flex-start' >
+        
+        <>
 
-                        <Grid item lg='3' md='3' sm='12' xs='12'>
-                            <Contacts contacts={contacts} current={current} setCurrent={setCurrent} />
-                        </Grid>
-                        <Grid item noWrap lg='9' xs='12' >
-                            
-                            <Chat contact={current} />
-                        </Grid>
-
-
-                    </Grid>
-                :   <ChatMobilePage/>
-             }
-            
-        </div>
+        </>
     )
 }
 

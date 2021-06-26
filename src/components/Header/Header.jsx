@@ -6,6 +6,7 @@ import { withStyles } from "@material-ui/core/styles"
 import useStyles from './styles.js'
 import { Icon } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import routes from '../../Routes'
 const Header = () => {
     
     const classes=useStyles()
@@ -23,10 +24,10 @@ const Header = () => {
       const handleClose = () => {
         setAnchor(null);
       };
-    // useEffect(()=>{
-    //     window.addEventListener('resize',handleSizeChange)
+    useEffect(()=>{
+        window.addEventListener('resize',handleSizeChange)
         
-    // },[])
+    },[])
 
     return (
         <>
@@ -63,21 +64,21 @@ const Header = () => {
                                                 </NavLink>
                                             </MenuItem>
                                             <MenuItem onClick={handleClose}>
-                                                <NavLink  to='/chat' className={classes.nav}>
+                                                <NavLink  to={routes.chat} className={classes.nav}>
                                                     <Typography variant='h5'>
                                                         Chat
                                                     </Typography>
                                                 </NavLink>
                                             </MenuItem>
                                             <MenuItem onClick={handleClose}>
-                                                <NavLink  to='/quiz-list' className={classes.nav}>
+                                                <NavLink  to={routes.quizzes} className={classes.nav}>
                                                     <Typography variant='h5'>
                                                         Quiz
                                                     </Typography>
                                                 </NavLink>
                                             </MenuItem>
                                             <MenuItem onClick={handleClose}>
-                                                <NavLink  to='/profile' className={classes.nav}>
+                                                <NavLink  to={routes.profile} className={classes.nav}>
                                                     <Typography variant='h5'>
                                                         Profile
                                                     </Typography>
@@ -106,14 +107,14 @@ const Header = () => {
                                     </NavLink>
                                 </Grid>
                                 <Grid item>
-                                    <NavLink  to='/quiz-list' className={classes.nav}>
+                                    <NavLink  to={routes.quizzes} className={classes.nav}>
                                         <Typography variant='h5'>
                                             Quiz
                                         </Typography>
                                     </NavLink>
                                 </Grid>
                                 <Grid item>
-                                     <NavLink  to='/profile' className={classes.nav}>
+                                     <NavLink  to={routes.profile} className={classes.nav}>
                                         <Typography variant='h5'>
                                             Profile
                                         </Typography>

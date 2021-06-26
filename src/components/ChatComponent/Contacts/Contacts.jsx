@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 import './styles.css'
 const Contacts = ({current, setCurrent,contacts}) => {
     // Highlight current contact
@@ -14,10 +15,13 @@ const Contacts = ({current, setCurrent,contacts}) => {
                     {contacts.map((contact)=>(
                         <Grid item key={contact.id} onClick={()=>{setCurrent(contact)}} >
                             {/* if the contact id is equal to current contact */}
-                            <div className={`contact ${contact.id===current.id ? 'active' : '' }`}>
-                                <img src={contact.profile_pic}/>
-                                <h3>{contact.name} </h3>
-                            </div>
+                            <Link to={`/chat/${contact.id}`} className='link'>
+                                <div className={`contact ${contact.id===current.id ? 'active' : '' }`}>
+                                    <img src={contact.profile_pic}/>
+                                    <h3>{contact.name} </h3>
+                                </div>
+                            </Link>
+                            
                         </Grid>
                     ))}
                 

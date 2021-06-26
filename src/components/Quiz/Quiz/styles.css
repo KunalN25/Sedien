@@ -1,0 +1,27 @@
+.quiz-example-container{
+    margin-top: 6%;
+    margin-bottom: 3%;
+    /* max-width: 20%; */
+    /* padding:100px; */
+    /* border:solid red; */
+}
+@media screen and (max-width:900px) {
+    .quiz-example-container{
+        margin-top: 10%;
+      
+    }
+}
+@media screen and (max-width:500px) {
+    .quiz-example-container{
+        margin-top: 17%;
+      
+    }
+}
+.card{
+    margin-bottom: 2%;
+    padding: 3% 0 0 2%;
+}
+.submit-btn{
+    /* margin-left: 87%; */
+    margin-bottom: 36%;
+}

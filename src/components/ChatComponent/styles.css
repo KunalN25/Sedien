@@ -1,6 +1,30 @@
 .container1 {
     /* padding:200; */
     margin-top: 4%;
-    /* height: 100; */
+    height: 100vh;
     /* border: solid red; */
+}
+@media screen and (max-width:972px) {
+    .container1 {
+        /* padding:200; */
+        margin-top: 9%;
+        /* height: 100; */
+        /* border: solid red; */
+    }
+}
+@media screen and (max-width:630px) {
+    .container1 {
+        /* padding:200; */
+        margin-top: 13%;
+        /* height: 100; */
+        /* border: solid red; */
+    }
+}
+@media screen and (max-width:500px) {
+    .container1 {
+        /* padding:200; */
+        margin-top: 17%;
+        /* height: 100; */
+        /* border: solid red; */
+    }
 }

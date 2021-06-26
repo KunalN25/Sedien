@@ -13,6 +13,10 @@
     background-color: rgb(199, 195, 195);
     
 }
+.link{
+    text-decoration: none;
+    color:black;
+}
 .contact{
     display: flex;
     /* margin:0 0 2% 0; */
