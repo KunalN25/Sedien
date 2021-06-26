@@ -132,7 +132,7 @@ const QuizComponent = () => {
                 {
                  
                         id:1,
-                        title:'What is Eleven\'s real name',
+                        title:'What is Eleven\'s real name?',
                         option1:'Emilia',
                         option2:'Jane',
                         option3:'Lucy',
